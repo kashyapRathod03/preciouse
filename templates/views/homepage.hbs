@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <link type="text/css" rel="stylesheet" href="/css/homepage.css">
+    <base href="/">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/carousel/">
+    <link href="/docs/4.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600&display=swap" rel="stylesheet">
+    <title>Home page</title>
+</head>
+
+
+
+<body>
+
+    {{>navbar data=user}}
+    {{!-- {{user.email}} --}}
+
+    <div class="container1">
+
+        <!-- crousel ......................................................................... -->
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                </div>
+                <img class="crousel-img"
+                    src="https://images.pexels.com/photos/3735641/pexels-photo-3735641.jpeg?auto=compress&cs=tinysrgb&w=600 "
+                    class="d-block w-100" alt="...">
+                <div class="carousel-caption haha1 d-md-block">
+                    <h5 class="text-our">Wear Brandy! Look smarter</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                    <!-- <button type="button" onclick="myalert()">Explore Now</button> -->
+                    <a href="/login" class="haha" type="button" onclick="myFunction()">Explore Now</a>
+                </div>
+
+
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img class="crousel-img"
+                        src="https://images.pexels.com/photos/4066293/pexels-photo-4066293.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        class="d-block w-100" alt="...">
+                    <div class="carousel-caption haha1 d-md-block">
+                        <h5 class="text-our">First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="crousel-img"
+                        src="https://images.pexels.com/photos/2129970/pexels-photo-2129970.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        class="d-block w-100" alt="...">
+                    <div class="carousel-caption haha1 d-md-block">
+                        <h5 class="text-our">First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!-- <hr class="featurette-divider" style="border-bottom: 3px solid red;"> -->
+    </div>
+
+
+
+    <div class="strip">
+        <center>
+            <h1> Shop now</h1>
+        </center>
+    </div>
+
+    <!-- divider................. -->
+    <!-- <hr class="featurette-divider" style="border-bottom: 3px solid red;"> -->
+    <div class="space">
+        <hr class="featurette-divider">
+        <div class="text-center">
+            <a href="">
+                <img src="https://images.pexels.com/photos/45982/pexels-photo-45982.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    class="rounded" alt="...">
+            </a>
+            <a href="">
+                <img src="https://images.pexels.com/photos/1148957/pexels-photo-1148957.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    class="rounded" alt="...">
+            </a>
+            <a href="">
+                <img src="https://images.pexels.com/photos/2850487/pexels-photo-2850487.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    class="rounded" alt="...">
+            </a>
+            <a href="">
+                <img src="https://images.pexels.com/photos/45055/pexels-photo-45055.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    class="rounded" alt="...">
+
+            </a>
+            <a href="">
+                <img src="https://images.pexels.com/photos/16170/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600"
+                    class="rounded" alt="...">
+
+            </a>
+            <a href="">
+                <img src="https://images.pexels.com/photos/1057313/pexels-photo-1057313.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    class="rounded" alt="...">
+
+            </a>
+            <a href="">
+                <img src="https://images.pexels.com/photos/3353621/pexels-photo-3353621.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    class="rounded" alt="...">
+
+            </a>
+            <a href="">
+                <img src="https://images.pexels.com/photos/934070/pexels-photo-934070.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    class="rounded" alt="...">
+
+            </a>
+
+        </div>
+    </div>
+
+
+    <hr class="featurette-divider">
+
+    <div class="space2">
+        <hr class="featurette-divider">
+        <div class="text-center2">
+            <a href="">
+                <img src="https://images.pexels.com/photos/7685511/pexels-photo-7685511.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    class="rounded2" alt="...">
+            </a>
+            <a href="">
+                <img src="https://images.pexels.com/photos/1148957/pexels-photo-1148957.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    class="rounded2" alt="...">
+            </a>
+            <a href="">
+                <img src="https://images.pexels.com/photos/6593898/pexels-photo-6593898.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    class="rounded2" alt="...">
+            </a>
+            <a href="">
+                <img src="https://images.pexels.com/photos/11965756/pexels-photo-11965756.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    class="rounded2" alt="...">
+            </a>
+        </div>
+    </div>
+
+    <!-- full size image block .................................................................... -->
+    <div class="strip">
+        <center>
+            <!-- <h1 > Shop now</h1> -->
+            <center class="rular-mid">Everyday Fashion. Fabricated With Love.</center>
+        </center>
+    </div>
+
+
+    <div class="container">
+        <div class="img-container w-auto p-0">
+            <div class="carousel-caption haha2">
+                <h5 class="text-our">20% Sale</h5>
+                <!-- <p>Some representative placeholder content for the first slide.</p> -->
+                <a href="slide_login.html" class="haha2-btn">Shop Now<svg xmlns="http://www.w3.org/2000/svg" width="30"
+                        height="30" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z" />
+                        <path fill-rule="evenodd"
+                            d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+                    </svg></a>
+            </div>
+            <a href="">
+
+                <img src="https://images.pexels.com/photos/1008206/pexels-photo-1008206.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="" class="full-img w-80 p-0 ">
+            </a>
+        </div>
+    </div>
+
+    <div class="space">
+        <hr class="featurette-divider">
+        <div class="text-center">
+            <a href="">
+                <img src="https://images.pexels.com/photos/45982/pexels-photo-45982.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    class="rounded" alt="...">
+            </a>
+            <a href="">
+                <img src="https://images.pexels.com/photos/1148957/pexels-photo-1148957.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    class="rounded" alt="...">
+            </a>
+            <a href="">
+                <img src="https://images.pexels.com/photos/2850487/pexels-photo-2850487.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    class="rounded" alt="...">
+            </a>
+            <a href="">
+                <img src="https://images.pexels.com/photos/45055/pexels-photo-45055.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    class="rounded" alt="...">
+
+            </a>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="img-container w-auto p-0">
+
+            <div class="carousel-caption haha3">
+                <h5 class="text-our">20% Sale</h5>
+                <!-- <p>Some representative placeholder content for the first slide.</p> -->
+                <a href="slide_login.html" class="haha2-btn">Shop Now<svg xmlns="http://www.w3.org/2000/svg" width="30"
+                        height="30" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z" />
+                        <path fill-rule="evenodd"
+                            d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+                    </svg></a>
+            </div>
+
+            <a href="">
+
+                <img src="https://images.pexels.com/photos/7275701/pexels-photo-7275701.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="" class="full-img w-80 p-0 ">
+            </a>
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="space">
+        <hr class="featurette-divider">
+        <div class="text-center">
+            <a href="">
+                <img src="https://images.pexels.com/photos/45982/pexels-photo-45982.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    class="rounded" alt="...">
+            </a>
+            <a href="">
+                <img src="https://images.pexels.com/photos/1148957/pexels-photo-1148957.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    class="rounded" alt="...">
+            </a>
+            <a href="">
+                <img src="https://images.pexels.com/photos/2850487/pexels-photo-2850487.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    class="rounded" alt="...">
+            </a>
+            <a href="">
+                <img src="https://images.pexels.com/photos/45055/pexels-photo-45055.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    class="rounded" alt="...">
+
+            </a>
+
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="space2">
+        <hr class="featurette-divider">
+        <div class="text-center2">
+            <a href="">
+                <img src="https://images.pexels.com/photos/7685511/pexels-photo-7685511.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    class="rounded2" alt="...">
+            </a>
+            <a href="">
+                <img src="https://images.pexels.com/photos/1148957/pexels-photo-1148957.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    class="rounded2" alt="...">
+            </a>
+            <a href="">
+                <img src="https://images.pexels.com/photos/6593898/pexels-photo-6593898.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    class="rounded2" alt="...">
+            </a>
+            <a href="">
+                <img src="https://images.pexels.com/photos/11965756/pexels-photo-11965756.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    class="rounded2" alt="...">
+            </a>
+        </div>
+    </div>
+
+
+    <!--    ----------------------    -->
+    <div class="space">
+        <hr class="featurette-divider">
+        <div class="text-center">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCPVProXafslCviR56IsLizp3bRSq9gUChYQ&usqp=CAU"
+                class="rounded" alt="...">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFQVelwbzU6uQx3nPR-73-4_YN4Fl36OGAZg&usqp=CAU"
+                class="rounded" alt="...">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUgK_SWMjcMbXFlaERzuUt1WvK6rT2b3EipA&usqp=CAU"
+                class="rounded" alt="...">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMmSRAessjW9ry3zCWUtimO9U6OTkDtTme5Q&usqp=CAU"
+                class="rounded" alt="...">
+        </div>
+    </div>
+    <hr class="featurette-divider">
+
+    <!-- div container........... -->
+    </div>
+
+    {{>footer}}
+<script>
+function myFunction() {
+  alert("Hello! Welcome to your shop for more Experience please login !!! " );
+}
+</script>
+
+</body>
+
+</html>
