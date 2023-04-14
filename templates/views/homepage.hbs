@@ -14,7 +14,7 @@
     <link href="/docs/4.6/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600&display=swap" rel="stylesheet">
-    <title>Home page</title>
+    <title>Precious|Home page</title>
 </head>
 
 
@@ -135,9 +135,11 @@
     <div class="space2">
         <hr class="featurette-divider">
         <div class="text-center2">
-            <a href="">
-                <img src="https://images.pexels.com/photos/7685511/pexels-photo-7685511.jpeg?auto=compress&cs=tinysrgb&w=600"
-                    class="rounded2" alt="...">
+           
+            <a href="" class="">
+                <img onmouseover="hover(this)" onmouseout="hoverOut(this)"
+                    src="https://images.pexels.com/photos/7685511/pexels-photo-7685511.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    class="rounded2 hover-img1" alt="...">
             </a>
             <a href="">
                 <img src="https://images.pexels.com/photos/1148957/pexels-photo-1148957.jpeg?auto=compress&cs=tinysrgb&w=600"
@@ -302,11 +304,20 @@
     </div>
 
     {{>footer}}
-<script>
-function myFunction() {
-  alert("Hello! Welcome to your shop for more Experience please login !!! " );
-}
-</script>
+    <script>
+
+        function myFunction() {
+            alert("Hello! Welcome to your shop for more Experience please login !!! ");
+        }
+        let img = document.getElementsByClassName('hover-img1');
+        function hover(img) {
+            img.src = 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2FyZWV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60'
+        }
+        function hoverOut(img) {
+            img.src = 'https://images.pexels.com/photos/7685511/pexels-photo-7685511.jpeg?auto=compress&cs=tinysrgb&w=600'
+        }
+
+    </script>
 
 </body>
 

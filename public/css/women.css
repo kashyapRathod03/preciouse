@@ -212,7 +212,7 @@ a {
     height: 30vh;
 }
     .rounded4{
-    height: 18vh;
+    height: 15vh;
     width: 21vw ;
     margin-top: 5%;
 }
@@ -229,11 +229,12 @@ a {
 }
     .rounded4{
         width: 22vw;
-        height: 20vh;
+        height: 15vh;
 }
 
 .t4{
     width: 22vw;
+    height: 13vh;
 }
 }
 

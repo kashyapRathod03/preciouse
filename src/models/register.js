@@ -30,10 +30,10 @@ const userschema = new mongoose.Schema({
 
 userschema.methods.generateAuthToken = async function(){
     try{
-        const token = jwt.sign({_id:this._id},"mynameiskashyaprathodandimadeveloper");
-        console.log("register token part: "+token);
+        const token = jwt.sign({_id:this._id},'mynameiskashyaprathodandimadeveloper');
+        // console.log("register token part: "+token);
         this.tokens = this.tokens.concat({token});
-        await this.save();
+        await this.save();  
         return token;
 
     }catch(err){
@@ -43,9 +43,9 @@ userschema.methods.generateAuthToken = async function(){
 
 userschema.pre("save", async function(next){
     if(this.isModified("password")){
-        console.log(`this is before bcrypt ${this.password}`);
+        // console.log(`this is before bcrypt ${this.password}`);
         this.password = await bcrypt.hash(this.password,10);
-        console.log(`this is after bcrypt ${this.password}`);
+        // console.log(`this is after bcrypt ${this.password}`);
     }
     next();
 })

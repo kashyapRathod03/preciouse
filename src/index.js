@@ -8,8 +8,10 @@ require('./db/conn');
 const register = require("./models/register");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-
-
+// const cookie = require("cookie-parser");
+const cookieParser = require("cookie-parser");
+const auth = require('./middleware/auth');
+// let alert = require('alert');
 app.use( express.static(path.join(__dirname, '../public')));
 
 // const staticpath = path.join(__dirname,"/public");
@@ -20,7 +22,8 @@ app.use( express.static(path.join(__dirname, '../public')));
 const templetepath = path.join(__dirname,"../templates/views");
 const partialpath = path.join(__dirname,"../templates/partials");
 
-
+app.use(express.json());
+app.use(cookieParser());
 app.use(express.urlencoded({extended:false}));
 
 
@@ -41,6 +44,7 @@ app.get("/homepage", (req,res)=>{
 });
 
 app.get("/men", (req,res)=>{
+    // console.log(req.cookies.jwt);
     res.render("men");
 });
 
@@ -52,6 +56,24 @@ app.get("/slide_login_signup", (req,res)=>{
     res.render("slide_login_signup");
 });
 
+app.get("/logout",auth,async(req,res)=>{
+    try {
+        console.log(req.user);
+        
+        req.user.tokens = req.user.tokens.filter((cre)=>{
+            return cre.token !== req.token;
+        })
+        res.clearCookie('jwt');
+        console.log("logout successfully.........");
+
+        await req.user.save();
+        // alert("Successfully logout........" );
+
+        res.render('slide_login_signup');
+    } catch (error) {
+        res.render("errorpage2");
+    }
+})
 
 
 app.get("/login", (req,res)=>{
@@ -66,7 +88,6 @@ app.post("/login",async(req,res)=>{
             const password=req.body.password;
     
         console.log(req.body.email);
-        // console.log(req.body.no);
         console.log(req.body.password);
         
         const user = await register.findOne({email:email});
@@ -76,18 +97,26 @@ app.post("/login",async(req,res)=>{
 
         // for generating tokens.................................................................................................
         const token = await user.generateAuthToken();
-        console.log("token part: "+token);
+        // console.log("token part: "+token);
+        res.cookie("jwt",token,{
+            httpOnly : true,
+            expires:new Date(Date.now() + 70000),
+            // secure:true
+        });
+
 
         if(istrue){
-            res.status(201).render("homepage",{
-                // 'user' : user
-                'user':user || null 
-            }); 
+            res.status(201).render("homepage");
+
+            // alert("Successsully login !!! " ); 
+
+            // res.status(201).render("homepage",{
+            //     // 'user' : user
+            //     'user':true
+            // }); 
         }
         else{
             res.render("errorpage");
-            // res.send("you have no account...");
-            // res.send("please create account");
         }
 
     }
@@ -107,20 +136,23 @@ app.post("/signup",async(req,res)=>{
             no:req.body.no,
             password:req.body.password
         })
-        console.log(req.body.email);
-        console.log(req.body.no);
-        console.log(req.body.password);
+        console.log(newuser);
         
         // middleware tokens ................................................................
         const token = await newuser.generateAuthToken();
         console.log("main index token part: "+token);
 
+        res.cookie("jwt",token,{
+            httpOnly : true,
+            expires:new Date(Date.now() + 70000)
+        });
+
         const signup = await newuser.save();
-        res.status(201).render("homepage");
+        res.status(201).render("homepage"); 
 
     }
     catch(err){
-        res.status(400).send("please enter new email_id or phon_no");
+        res.status(400).render("errorpage2");
     }
 } );
 
@@ -150,3 +182,4 @@ app.listen(8000,()=>{
     //     console.log(uservar); 
     // }
     // createtoken();
+

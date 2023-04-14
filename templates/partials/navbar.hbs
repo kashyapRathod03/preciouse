@@ -2,7 +2,8 @@
 
 
 <div class="logo">
-    <img src="/images/logo.png" class="logo-img" alt="precious">
+    <a href="/homepage">
+    <img src="/images/logo.png" class="logo-img" alt="precious" onclick="redirect"></a>
     <hr class="featurette-divider">
 
 </div>
@@ -25,14 +26,43 @@
                     <a class="nav-link" href="/women">Women</a>
                 </li>
                 <li class="nav-item" id="login-nav">
-                    {{!-- {{data.email:login}} --}}
-                    {{#if data.email}}
-                    <a class="nav-link" href="/slide_login_signup">{{data.email}}</a>
-                    {{else}}
-                    <a class="nav-link" href="/slide_login_signup">Login</a>
-                     {{/if}}
+                    <a class="nav-link"  href="/slide_login_signup" >Login</a>
+                </li>
+                 <li class="nav-item" id="logout-nav">
+                    <a class="nav-link"  href="/logout">Logout</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
+
+{{!-- <script>
+    const login = document.getElementById("login-nav");
+    const logout = document.getElementById("logout-nav");
+
+    const logouthere = ()=>{
+            console.log("hahaha");
+            login.style.display="none";
+            logout.style.display="inline";
+    }
+
+  const loginhere = ()=>{
+            login.style.display="inline";
+            logout.style.display="none";
+         
+    }
+</script> --}}
+
+
+
+
+  {{!-- {{#if data.email}}
+                    <a class="nav-link" href="/slide_login_signup"></a>
+                    {{else}}
+                    <a class="nav-link" href="/slide_login_signup">Login</a>
+                     {{/if}} 
+</script> --}}
+<script src="/js/login.js"></script>
+
+
+                  
